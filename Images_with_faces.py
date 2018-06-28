@@ -1,11 +1,9 @@
 import os
 import numpy as np
-from datetime import datetime
 import cv2
 import argparse
-from PIL import Image  # For face recognition we will the the LBPH Face Recognizer
-face_cascade = cv2.CascadeClassifier('/home/karthik/Project/data/haarcascades/haarcascade_frontalface_alt2.xml')
-#path = "/home/karthik/Pictures/Webcam/recup_dir.3/"
+from PIL import Image
+face_cascade = cv2.CascadeClassifier('/haarcascades/haarcascade_frontalface_alt2.xml')
 parser = argparse.ArgumentParser()
 parser.add_argument("-s", '--source', required=True)
 parser.add_argument("-d", '--destination', required=True)
