@@ -10,7 +10,7 @@ parser.add_argument("-d", '--destination', required=True)
 args = parser.parse_args()
 path=args.source
 dest=args.destination
-def getImagesWithID(path):
+def getImages(path):
     imagePaths = [os.path.join(path, f) for f in os.listdir(path)]
     n = (len([os.path.join(path, f) for f in os.listdir(dest)]))
     for imagePath in imagePaths:
@@ -29,5 +29,5 @@ def getImagesWithID(path):
                 cv2.imshow("img", img)
 
 
-getImagesWithID(path)
+getImages(path)
 cv2.destroyAllWindows()
